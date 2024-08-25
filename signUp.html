@@ -1,11 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-up page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <h1>Sign up page Welcome</h1>
+    <div class="body-container">
+        <div class="leftSideImage">
+            <img src="logo.png" alt="Soft Solutions Logo" class="overlay-image">
+            <p>Photo by <a href="https://unsplash.com/@tianhao_wang?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Tianhao Wang</a> on <a href="https://unsplash.com/photos/a-man-sitting-on-top-of-a-hill-under-a-night-sky-filled-with-stars-T9rOibnaM48?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+            </p>
+        </div>
+        <div class="rightSidePortion">
+            <div class="formIntro">
+                <p>Stay updated with Soft Solutions! <b>Sign up for our monthly newsletter</b> to get the latest tech insights, tips, and updates from our software experts.</p>
+                <p style="font-size: 2rem; margin-top: 17px;">
+                    <b>Join us today !</b>
+                </p>
+            </div>
+            <div class="formElements">
+                <form action="" method="get" id="formBody">
+                    <div>
+                        <label for="firstName">First name</label>
+                        <input type="text" id="firstName" name="firstName">
+                    </div>
+                    <div>
+                        <label for="lastName">Last name</label>
+                        <input type="text" id="lastName" name="lastName">
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div>
+                        <label for="phoneNo">Phone number</label>
+                        <input type="tel" id="phoneNo" name="phoneNo">
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password">
+                    </div>
+                    <div>
+                        <label for="confPassword">Confirm Password</label>
+                        <input type="password" id="confPassword" name="confPassword">
+                    </div>
+                </form>
+            </div>
+            <div class="formFooter">
+                <button type="submit" form="formBody">Create Account</button>
+                <p>Already have an account? <a href="">Log in</a></p>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>

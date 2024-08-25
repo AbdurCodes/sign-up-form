@@ -1,0 +1,111 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Baskervville SC", serif;
+}
+
+/* .baskervville-sc-regular {
+    font-family: "Baskervville SC", serif;
+    font-weight: 400;
+    font-style: normal;
+  } */
+  
+
+h1 {
+    background-color: aquamarine;
+}
+
+.body-container {
+    display: flex;
+}
+
+.leftSideImage {
+    position: relative;
+    width: 35vw;
+    height: 100vh;
+    background-image: url(sideImage.jpg);
+    background-size: cover;
+    opacity: 0.9;
+
+    & p {
+        position: absolute;
+        color: aliceblue;
+        bottom: 12px;
+        width: 100%;
+        text-align: center;
+        opacity: 0.7;
+    }
+
+    & a {
+        color: aliceblue;
+    }
+}
+
+.overlay-image {
+    position: absolute;
+    top: 20%;
+    height: 20%;
+    width: 100%;
+    opacity: 0.5;
+}
+
+.rightSidePortion {
+    width: 65vw;
+    height: 100vh;
+    background-color: rgb(223, 189, 145);
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.formIntro {
+    background-color: rgb(229, 185, 128);
+    height: 30%;
+    width: 100%;
+    padding: 35px;
+    font-size: 1.2rem;
+}
+
+.formElements {
+    background-color: rgb(159, 195, 224);
+    height: 47%;
+    width: 100%;
+}
+
+
+#formBody {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 35px;
+    gap: 25px 0px;
+
+    & label {
+        display: block;
+        font-weight: 800;
+    }
+    & input {
+        width: 60%;
+        height: 55%;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        padding: 5px;
+        background-color: bisque;
+    }
+}
+
+.formFooter {
+    background-color: rgb(191, 123, 255);
+    height: 23%;
+    width: 100%;
+    padding: 35px;
+
+    & button {
+        width: 174px;
+        height: 40px;
+        font-size: 1.1rem;
+        background-color: rgb(126, 240, 164);
+        margin-bottom: 12px;
+    }
+}
