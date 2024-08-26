@@ -17,50 +17,91 @@
             <div class="logoBg">
                 <img src="logo.png" alt="Soft Solutions Logo" class="overlay-image">
             </div>
-            <p>Photo by <a href="https://unsplash.com/@tianhao_wang?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Tianhao Wang</a> on <a href="https://unsplash.com/photos/a-man-sitting-on-top-of-a-hill-under-a-night-sky-filled-with-stars-T9rOibnaM48?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+            <p>Photo by <a
+                    href="https://unsplash.com/@tianhao_wang?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Tianhao
+                    Wang</a> on <a
+                    href="https://unsplash.com/photos/a-man-sitting-on-top-of-a-hill-under-a-night-sky-filled-with-stars-T9rOibnaM48?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
             </p>
         </div>
         <div class="rightSidePortion">
             <div class="formIntro">
-                <p>Stay updated with Soft Solutions! <b>Sign up for our monthly newsletter</b> to get the latest tech insights, tips, and updates from our software experts.</p>
+                <p>Stay updated with Soft Solutions! <b>Sign up for our monthly newsletter</b> to get the latest tech
+                    insights, tips, and updates from our software experts.</p>
                 <p style="font-size: 2rem; margin-top: 17px;">
                     <b>Join us today !</b>
                 </p>
             </div>
             <div class="formElements">
-                <form action="" method="get" id="formBody">
+                <form action="" method="get" id="formBody" onsubmit="return formValidate()">
                     <div>
-                        <label for="firstName">First name</label>
-                        <input type="text" id="firstName" name="firstName">
+                        <label for="firstName"><span aria-label="required">* First name</label>
+                        <input type="text" id="firstName" name="firstName" required>
                     </div>
                     <div>
                         <label for="lastName">Last name</label>
                         <input type="text" id="lastName" name="lastName">
                     </div>
                     <div>
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email">
+                        <label for="email"><span aria-label="required">* </span>Email</label>
+                        <input type="email" id="email" name="email" required>
                     </div>
                     <div>
                         <label for="phoneNo">Phone number</label>
                         <input type="tel" id="phoneNo" name="phoneNo">
                     </div>
                     <div>
-                        <label for="password">Password</label>
-                        <input type="password" id="password" name="password">
+                        <label for="password"><span aria-label="required">* Password</label>
+                        <input type="password" id="password" name="password" required>
+                        <p class="passwordMismatch"></p>
                     </div>
                     <div>
-                        <label for="confPassword">Confirm Password</label>
-                        <input type="password" id="confPassword" name="confPassword">
+                        <label for="confPassword"><span aria-label="required">* Confirm Password</label>
+                        <input type="password" id="confPassword" name="confPassword" required>
+                        <p class="passwordMismatch"></p>
                     </div>
                 </form>
             </div>
             <div class="formFooter">
                 <button type="submit" form="formBody">Create Account</button>
-                <p>Already have an account? <a href="">Log in</a></p>
+                <p><b>Already have an account? <a href="">Log in</a></b></p>
             </div>
         </div>
     </div>
+
+
+
+
+
+    <!-- JS -->
+    <script>
+
+        let password = document.getElementById('password');
+        let confirmPassword = document.getElementById('confPassword');
+        let passwordMismatches = document.querySelectorAll('.passwordMismatch');
+
+        function formValidate() {
+            if (password.value !== confirmPassword.value) {
+                for (let passwordMismatch of passwordMismatches) {
+                    passwordMismatch.textContent = '* Password mismatch!';
+                }
+                event.preventDefault();
+            }
+            else {
+                for (let passwordMismatch of passwordMismatches) {
+                    passwordMismatch.textContent = '';
+                }
+            }
+        }
+
+
+
+
+
+
+    </script>
+
+
+
 </body>
 
 </html>

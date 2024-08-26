@@ -104,6 +104,16 @@ h1 {
         padding: 5px;
         background-color: bisque;
         border-color: #E5E7EB;
+
+        &:invalid {
+            border: 2px solid red;
+        }
+
+        &:focus {
+            border: 2px solid rgb(62, 62, 240);
+            outline: none;
+            box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, .1);
+        }
     }
 }
 
@@ -121,4 +131,10 @@ h1 {
         color: aliceblue;
         margin-bottom: 12px;
     }
+}
+
+.passwordMismatch {
+    color: red;
+    font-weight: 600;
+    font-family: serif;
 }
